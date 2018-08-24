@@ -1,0 +1,10 @@
+git config --global user.name "username" : Used for setting username.
+git config -- user.email "emailid": Used for setting email id.
+git init : Initialize a local Git repository.
+git add "file-name.txt" : Add a file to the staging area.
+git add . : Add all  files to the staging area.
+git status : Displays the state of the working directory and the staging area. 
+git log : Allow us to review and read a history of everything that happens to a repository. 
+git commit -m "[commit message]" : Record changes to the repository
+git remote add origin  "remote address" : Add a remote repository
+git push -u origin [branch name] : Push changes to remote repository

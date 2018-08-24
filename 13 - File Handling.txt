@@ -1,0 +1,42 @@
+1.
+  >>> filename="newfile.txt"
+>>> file=open(filename,"r")
+>>> for line in file:
+	print(line)
+
+	
+Anand Kumar
+LPU
+2.
+  >>> f=open("newfile.txt","r")
+>>> f1=open("anand.txt","w")
+>>> for line in f:
+	f1.write(line)
+	
+12
+3
+>>> f1=open("anand.txt","r")
+>>> for line in f1:
+	print(line)
+	
+Anand Kumar
+LPU
+3.
+   >>> f=open("newfile.txt","r")
+>>> f1=open("anand.txt","a")
+>>> for line in f:
+	f1.write(line)
+
+	
+12
+3
+>>> f1=open("anand.txt","r")
+>>> for line in f1:
+	print(line)
+
+	
+Anand Kumar
+
+LPUAnand Kumar
+
+LPU

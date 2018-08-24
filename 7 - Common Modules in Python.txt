@@ -1,0 +1,45 @@
+1.
+     Python tuple is used to represnt time. It is made up of nine numbers. 
+     0 - Year,  1- Month,   2-Day, 3- Hour
+     4- Minute, 5- Second,  6- Day of Week, 7- Day of Year, 8- DST     
+2.
+   >>> import time
+>>> print(time.asctime())
+Sat Jun 23 14:03:29 2018
+3.
+   >>> print(time.strftime("%B",time.localtime()))
+June
+4.
+   >>> print(time.strftime("%A",time.localtime()))
+Saturday
+5.
+  >>> from datetime import *
+>>> now=datetime.now()
+>>> print(now.strftime('%x'))
+06/23/18
+6.
+  >>> print(time.strftime("%r",time.localtime()))
+02:26:48 PM
+7.
+   >>> import math
+>>> n=int(input("Enter a number: "))
+Enter a number: 4
+>>> print(math.factorial(n))
+24
+8.
+  >>> import math
+>>> n=int(input("Enter a number: "))
+Enter a number: 4
+>>> n1=int(input("Enter another number: "))
+Enter another number: 8
+>>> print(math.gcd(n,n1))
+4
+9.
+ *  >>> import os
+>>> print(os.getcwd())
+C:\Users\a\AppData\Local\Programs\Python\Python36-32
+ *  >>> import os
+>>> print(os.environ)
+
+
+

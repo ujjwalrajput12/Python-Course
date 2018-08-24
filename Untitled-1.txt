@@ -1,0 +1,62 @@
+1.
+>>> a=3
+>>> try:
+    if a < 4:
+        b=a/(a-3)
+        print(b)
+except(ZeroDivisionError):
+    print("change value of a")
+
+change value of a
+2.
+  >>> try:
+   l =[1,2,3]
+   print(l[3])
+except(IndexError):
+    print("incorrect index used while accessing")
+
+incorrect index used while accessing
+3.
+  An exception
+ 
+4.
+   -5.0
+a/b result in 0
+5.
+  * Import Error
+   >>> import sys
+>>> try:
+    from exception import myexception
+except Exception as e:
+    print(e)
+
+    
+No module named 'exception'
+
+* Value Error
+  >>> try:
+    name=input("Enter your name: ")
+    age=int(input("Enter your age: "))
+    print("Name:",name)
+    print("Age:",age)
+except(ValueError):
+          print("Enter string for name and integer for age")
+
+          
+Enter your name: 9
+Enter your age: a
+Enter string for name and integer for age
+* Index Error
+  >>> n = [3,5,7]
+>>> def myFun(x):
+    try:
+        for i in x:
+            print (x[i])
+
+    except(IndexError):
+        print("Incorrect index found")
+
+        
+>>> myFun(n)
+Incorrect index found
+  

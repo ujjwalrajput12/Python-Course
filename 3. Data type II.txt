@@ -1,0 +1,66 @@
+#Tuples
+1.
+>>> t1=(2,3,3.4,3.5,'ak')
+>>> print(t1)
+(2, 3, 3.4, 3.5, 'ak')
+>>> print(len(t1))
+5
+
+2.
+>>> t2=(2,3,4,3.4)
+>>> print(max(t2))
+4
+>>> print(min(t2))
+2
+
+3.
+>>> p=1
+>>> for i in range(0,len(t2)):
+	p*=t2[i]	
+>>> print(p)
+81.6
+
+#Set Difference
+1.
+>>>s1=set([1,2,3])
+>>>s2=set([1,1,3])
+>>> print(s1-s2)
+{2}
+
+# Set comparison
+>>> s1=set([2,3,4,5,6,7])
+>>> s2=set([2,3])
+>>> print(s2 < s1)
+True
+>>> print(s2 <= s1)
+True
+
+#Set Intersection
+>>> print(s2 & s1)
+{2, 3}
+
+# Dictionaries
+1.
+d={}
+>>> for i in range(0,5):
+	key=input("Enter name: ")
+	marks=int(input("Enter marks: "))
+	d.update({key:marks})
+
+	
+Enter name: ak
+Enter marks: 20
+Enter name: jk
+Enter marks: 30
+Enter name: anand
+Enter marks: 90
+Enter name: kumar
+Enter marks: 29
+Enter name: raj
+Enter marks: 80
+>>> print(d)
+{'ak': 20, 'jk': 30, 'anand': 90, 'kumar': 29, 'raj': 80}
+
+2.
+>>> print(sorted(d.values()))
+[20, 29, 30, 80, 90]

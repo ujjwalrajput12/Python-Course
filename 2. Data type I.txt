@@ -1,0 +1,53 @@
+1.
+>>> l1=["Anand","Amrit","Shubham","Jay"]
+>>> print(l1)
+['Anand', 'Amrit', 'Shubham', 'Jay']
+
+2.
+>>> l2=['google','apple','facebook','microsoft','tesla']
+>>> l3=l1+l2
+>>> print(l3)
+['Anand', 'Amrit', 'Shubham', 'Jay', 'google', 'apple', 'facebook', 'microsoft', 'tesla']
+
+3.
+>>> l1=[1,2,2,3,33,4,]
+>>> l1.count(2)
+2
+>>>print(l1.count(4))
+1
+
+4.
+  >>> l=[2,4,6,1,9,8]
+>>> l.sort()
+>>> print(l)
+[1, 2, 4, 6, 8, 9]
+
+5.
+>>> l1=[2,4,6,8]
+>>> l2=[3,6,9,12,15]
+>>> l3=l1+l2
+>>> l3.sort()
+>>> print(l3)
+[2, 3, 4, 6, 6, 8, 9, 12, 15]
+
+6. 
+# Stack using list
+>>> stack=[2,3,4,5]
+>>> stack.append(9)
+>>> print(stack)
+[2, 3, 4, 5, 9]
+>>> stack.pop()
+9
+>>> print(stack)
+[2, 3, 4, 5]
+
+# Queue using list
+>>> from collections import deque
+>>> queue=deque([3,4,5,6])
+>>> queue.append(9)
+>>> print(queue)
+deque([3, 4, 5, 6, 9])
+>>> queue.popleft()
+3
+>>> print(queue)
+deque([4, 5, 6, 9])

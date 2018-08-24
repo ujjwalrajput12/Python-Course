@@ -1,0 +1,37 @@
+1. 
+>>> print("Anand Kumar")
+Anand Kumar
+
+2. 
+>>> print("Anand "+"Kumar")
+Anand Kumar
+3.
+
+>>> a = input("Enter first variable: ")
+ Enter first variable: 3
+>>> b = input("Enter second variable: ")
+Enter second variable: 5
+>>> c = input("Enter third variable: ")
+Enter third variable: 2
+>>> print(a)
+3
+>>> print(b)
+5
+>>> print(c)
+2
+
+4.
+ >>> print("Let's get started")
+Let's get started
+5.
+ >>> s = "Acadview"
+>>> course = "Python"
+>>> fees = 5000
+>>> print(('%s %s %d')%(s,course,fees))
+
+6. 
+>>> name = "Tony Stark"
+>>> salary = 1000000
+>>> print(('%s %d')%(name,salary))
+Tony Stark 1000000
+
