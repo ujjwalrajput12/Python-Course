@@ -1,0 +1,89 @@
+1.
+  >>> class Animal:
+	def animal_attribute(self):
+		self.type=input("Enter type: (Wild/Non-Wild)")
+		self.legcount=int(input("Enter leg count: "))
+
+		
+>>> class Tiger(Animal):
+	def access(self):
+		return self.animal_attribute()
+
+	
+>>> t=Tiger()
+>>> t.access()
+Enter type: (Wild/Non-Wild)Wild
+Enter leg count: 4
+2.In Python 3:
+   A B
+   A B
+
+3.
+  >>> class Cop:
+	def __init__(self,name,age,workex):
+		self.name=name
+		self.age=age
+		self.workex=workex
+	def display(self):
+		print("Name: ",self.name)
+		print("Age: ",self.age)
+		print("Work Experience: ",self.workex)
+	def update(self):
+		name=input("Enter name: ")
+		age=int(input("Enter age: "))
+		workex=int(input("Enter work experience in years: "))
+		self.name=name
+		self.age=age
+		self.workex=workex
+
+		
+>>> class Mission(Cop):
+	def add_mission_details(self):
+		self.available=True
+		print("Available detail: ",available)
+		return self.display()
+
+	
+>>> m=Mission('Harshit',22,1)
+>>> m.display()
+Name:  Harshit
+Age:  22
+Work Experience:  1
+>>> m.update()
+Enter name: Amar
+Enter age: 22
+Enter work experience in years: 2
+>>> m.display()
+Name:  Amar
+Age:  22
+Work Experience:  2
+>>> m.add_mission_details()
+Available detail:  True
+Name:  Amar
+Age:  22
+Work Experience:  2
+4.
+   >>> class Shape:
+	def __init__(self,length,breadth):
+		self.length=length
+		self.breadth=breadth
+	def area(self):
+		return self.length*self.breadth
+
+	
+>>> class Rectangle(Shape):
+	def display(self):
+		print(self.area())
+
+		
+>>> class Square(Shape):
+	def display(self):
+		print(self.area())
+
+		
+>>> r=Rectangle(3,4)
+>>> r.area()
+12
+>>> s=Square(3,3)
+>>> s.area()
+9

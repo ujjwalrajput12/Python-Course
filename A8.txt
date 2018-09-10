@@ -1,0 +1,117 @@
+1.
+   >>> class Circle:
+	pi=3.14
+	def __init__(self,rad):
+		self.radius=rad
+	def getArea(self):
+		ar=self.pi*self.radius*self.radius
+		print('Area is ' ,round(ar,2))
+	def getCircumference(self):
+		      peri=2*self.pi*self.radius
+		      print(peri)
+
+		      
+>>> c=Circle(3)
+		      
+>>> c.getArea()
+		      
+Area is  28.26
+>>> c.getCircumference()
+		      
+18.84
+2.
+  >>> class Student:
+	def __init__(self,name,roll):
+		self.name=name
+		self.roll=roll
+	def display(self):
+		print('Name: ' ,self.name,' Roll: ',self.roll)
+
+		      
+>>> s=Student('Anand',3)
+		      
+>>> s.display()
+		      
+Name:  Anand  Roll:  3
+3.
+  >>> class Temperature:
+	def convertFahrenheit(self,celcius):
+		      self.result=(celcius-32)*5/9
+		      print("Temperature in Fahrenheit: ",round(self.result,2))
+	def convertCelcius(self,fahren):
+		      self.result=fahren*9/5+32
+		      print("Temperature in Fahrenheit: ",self.result)
+
+		      
+>>> t.convertCelcius(20)
+		      
+Temperature in Fahrenheit:  68.0
+>>> t.convertFahrenheit(68)
+		      
+Temperature in Fahrenheit:  20.0
+4.
+  >>> class MovieDetails:
+	def __init__(self,moviename,artistname,releaseyr,rating):
+		      self.moviename=moviename
+		      self.artistname=artistname
+		      self.releaseyr=releaseyr
+		      self.rating=rating
+	def display(self):
+		print('Movie Name: ',self.moviename)
+		print('Artist Name: ',self.artistname)
+		print('Release Year: ',self.releaseyr)
+		print('Rating: ',self.rating)
+	def update(self):
+		      moviename=input("Enter Movie name: ")
+		      artistname=input("Enter Artsit name: ")
+		      releaseyr=int(input("Enter Release year: "))
+		      rating=float(input("Enter rating: "))
+		      self.moviename=moviename
+		      self.artistname=artistname
+		      self.releaseyr=releaseyr
+		      self.rating=rating
+
+		      
+>>> m=MovieDetails('Krrish','Hrithik Roshan',2006,6.4)
+		      
+>>> m.display()
+		      
+Movie Name:  Krrish
+Artist Name:  Hrithik Roshan
+Release Year:  2006
+Rating:  6.4
+>>> m.update()
+		      
+Enter Movie name: Krrish 3
+Enter Artsit name: Hrithik Roshan
+Enter Release year: 2013
+Enter rating: 5.3
+>>> m.display()
+		      
+Movie Name:  Krrish 3
+Artist Name:  Hrithik Roshan
+Release Year:  2013
+Rating:  5.3
+
+5.
+   >>> class Expenditure:
+	def __init__(self,expenditure,savings):
+		self.expenditure=expenditure
+		self.savings=savings
+	def expendsave(self):
+		print("Expenditure: ",self.expenditure)
+		print("Savings: ",self.savings)
+	def income(self):
+		self.income=self.expenditure+self.savings
+	def displayincome(self):
+		print("Income: ",self.income)
+
+		
+>>> ex=Expenditure(3000,12000)
+>>> ex.expendsave()
+Expenditure:  3000
+Savings:  12000
+>>> ex.income()
+>>> ex.displayincome()
+Income:  15000
+  

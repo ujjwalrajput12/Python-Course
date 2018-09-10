@@ -1,0 +1,74 @@
+1.
+
+>>> def areac():
+	rad=float(input("Enter radius: "))
+	ar= 3.14*rad*rad
+	print("Area is: ",round(ar,2))
+
+	
+>>> areac()
+Enter radius: 2
+Area is:  12.56
+
+2.
+
+>>> def perfect(num):
+	s=0
+	n=num
+	i=1
+	while i<n:
+		if n % i == 0:
+			s=s+i
+		i=i+1
+	if n==s:
+		print(n," is perfect number")
+
+		
+>>> for i in range(1,1000):
+	perfect(i)
+
+	
+6  is perfect number
+28  is perfect number
+496  is perfect number
+3.
+   >>> def table(n,i=1):
+	print(n*i)
+	if i!=10:
+		table(n,i+1)
+
+		
+>>> table(12)
+12
+24
+36
+48
+60
+72
+84
+96
+108
+120
+4.
+   >>> def power(base,exp):
+	if(exp==1):
+		return(base)
+	if(exp!=1):
+		return(base*power(base,exp-1))
+>>> base=int(input("Enter base: "))
+Enter base: 2
+>>> exp=int(input("Enter exponential value: "))
+Enter exponential value: 3
+>>> print("Result:",power(base,exp))
+Result: 8
+5.
+
+def factorial(n):
+    f=1
+    dict={}
+    for i in range(1,n+1):
+        f=f*i
+    dict['factorial']=f
+    print(dict)
+n=int(input("Enter number: "))
+factorial(n)

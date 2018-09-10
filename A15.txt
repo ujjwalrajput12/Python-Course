@@ -1,0 +1,137 @@
+﻿1.
+   mysql> create database account;
+Query OK, 1 row affected (0.17 sec)
+>>> import MySQLdb
+>>> db=MySQLdb.connect("localhost","root","mysql","account")
+		       
+>>> cursor=db.cursor()
+>>> cursor.execute("create table tblaccount(acctno int,acctbal int)")
+0	       
+>>> cursor.execute("insert into tblaccount values(1234567899,3200000)")
+		       
+1
+>>> cursor.execute("select * from tblaccount")
+		       
+1
+>>> data=cursor.fetchall()
+		       
+>>> print(data)
+		       
+((1234567899, 3200000),)
+>>> cursor.execute("delete from tblaccount")
+		       
+1
+>>> cursor.execute("select * from tblaccount")
+		       
+0
+>>> data=cursor.fetchall()
+		       
+>>> print(data)
+		       
+()
+>>> db.commit()
+		       
+>>> db.close()
+
+2.
+   mysql> create database expense;
+Query OK, 1 row affected (0.11 sec)
+ ●	 Add daily expenses as per category
+
+  >>> import MySQLdb
+		       
+>>> db=MySQLdb.connect("localhost","root","mysql","expense")
+		       
+>>> cursor.execute("create table expenses(dayname varchar(30),expense int,datee varchar(20))")
+		       
+0
+>>>lis=[['Sunday',1000,'24-06-2018'],['Monday',2000,'25-06-2018'],['Tuesday',300,'26-06-2018'],['Wednesday',500,'27-06-2018'],['Thursday',3000,'28-06-2018']]
+>>> for x in range(5):
+	cursor.execute("insert into expenses values('%s','%d','%s')"%(lis[x][0],lis[x][1],lis[x][2]))
+		       
+1
+1
+1
+1
+1
+●	Find the total expenses for each day
+
+ >>> cursor.execute("select Day,(Category1 + Category2 + Category3 ) as totalexpense from tblexpense")
+		   
+5
+>>> data=cursor.fetchall()
+		   
+>>> print(data)
+		   
+(('Monday', 600), ('Tuesday', 900), ('Wednesday', 1000), ('Thursday', 1000), ('Friday', 1500))
+
+●	Find the total expenses made by you as per category
+  >>> cursor.execute("select category1,sum(Category1),category2,sum(Category2),category3,sum(Category3) from tblexpense")
+		   
+1
+>>> for row in cursor:
+	print("Category1:",row[0],"Category2:",row[1],"Category3:",row[2])
+
+●	 Find the total expenses between 2 dates		   
+Category1: 100 Category2: 1200 Category3: 200
+
+  >>> cursor.execute("select sum(Category1)+sum(Category2)+sum(Category3)  from tblexpense where date between '25/06/2018' and '27/06/2018'")
+		   
+1
+>>> for row in cursor:
+	print("Total:",row[0])
+
+		   
+Total: 2500
+●	 Display expenses records from databases.
+  >>> cursor.execute("select Category1,Category2,Category3 from tblexpense")
+		   
+5
+●Display expenses records from databases.
+>>> for row in cursor:
+	print("Category1:",row[0],"Category2:",row[1],"Category3:",row[2])
+		   
+Category1: 100 Category2: 200 Category3: 300
+Category1: 200 Category2: 300 Category3: 400
+Category1: 300 Category2: 600 Category3: 100
+Category1: 100 Category2: 200 Category3: 700
+Category1: 500 Category2: 200 Category3: 800
+● Update the existing records from expenses if you made wrong entry.
+  >>> cursor.execute("update tblexpense set category1=1000 where day='Monday'")
+1
+>>> for row in cursor:
+	print("Category1:",row[0])
+
+	
+Category1: 1000
+
+3.
+   
+
+
+   >>> cursor.execute("create table tblstudent(name varchar(20),roll int,age int,course varchar(10),sub1 varchar(2),sub2 varchar(2),sub3 varchar(2),date varchar(10))")
+   >>> lis=[['Harshit',1,22,'MCA','y','y','y','01/01/2018'],['Amit',2,22,'MCA','y','y','n','01/01/2018'],
+	 ['Ankit',3,22,'MCA','y','y','y','01/01/2018'],['Jay',4,22,'MCA','y','y','y','01/01/2018'],
+	 ['Rahul',5,23,'MCA','n','n','y','01/01/2018'],['Ram',6,22,'MCA','n','n','y','01/01/2018'],
+	 ['Satyam',7,22,'MCA','y','y','n','01/01/2018']
+        ]
+  >>> for x in range(7):
+	cursor.execute("insert into tblstudent values('%s','%d','%d','%s','%s','%s','%s','%s')"%(lis[x][0],lis[x][1],lis[x][2],lis[x][3],lis[x][4],lis[x][5],lis[x][6],lis[x][7]))
+					  
+1
+1
+1
+1
+1
+1
+1
+>>> cursor.execute("select * from tblstudent where name='Anand' and date='01/01/2018'")
+						  
+1
+>>> for row in cursor:
+	print("Name:",row[0],"Roll:",row[1],"Age:",row[2],"Course:",row[3],"Sub1:",row[4],"Sub2:",row[5],"Sub3:",row[6])
+
+	      
+Name: Harshit Roll: 1 Age: 22 Course: MCA Sub1: y Sub2: y Sub3: y
+
+

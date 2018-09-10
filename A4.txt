@@ -1,0 +1,79 @@
+1.
+>>> year = int(input("Enter year: "))
+Enter year: 2004
+>>> if year % 400 ==0 and year %100 !=0 or (year % 4 ==0):
+	print(year," is a leap year")
+else:
+	print(year," is not leap year")
+
+	
+2004  is a leap year
+
+2.
+>>> leng = float(input("Enter length: "))
+Enter length: 3
+>>> bred = float(input("Enter breadth: "))
+Enter breadth: 4
+>>> if leng == bred:
+	print("Dimensions are of square")
+else:
+	print("Dimensions are of rectangle")
+
+	
+Dimensions are of rectangle
+
+3.
+>>> p1 = int(input("Enter age of first people: "))
+Enter age of first people: 20
+>>> p2 = int(input("Enter age of first people: "))
+Enter age of first people: 22
+>>> p3 = int(input("Enter age of first people: "))
+Enter age of first people: 50
+>>> if p1 > p2 and p1 > p3:
+	print(p1," is oldest")
+elif p2 > p3:
+	print(p2, " is oldest")
+else:
+	print(p3," is oldest")
+
+	
+50  is oldest
+
+>>> if p1 < p2 and p1 < p3:
+	print(p1," is youngest")
+elif p2 < p3:
+	print(p2, " is youngest")
+else:
+	print(p3," is youngest")
+
+	
+20  is youngest
+
+4.
+
+>>> points = int(input("Enter your points: "))
+Enter your points: 52
+>>> if points >=1 and points <=50:
+	print("Sorry!No prize this time.")
+elif points >50 and points <=150:
+	print("Congratulations!You won a Wodden dog!")
+elif points >150 and points <=180:
+	print("Congratulations!You won a Book!")
+elif points >180 and points <=200:
+	print("Congratulations!You won a Chocolates!")
+
+	
+Congratulations!You won a Wodden dog!
+
+5.
+>>> quant = int(input("Enter quantity: "))
+Enter quantity: 20
+>>> cost = 100 * 20
+>>> if cost > 1000:
+	cost = cost - 0.1 * cost
+	print("Cost=",cost)
+else:
+	print("Cost=",cost)
+
+	
+Cost= 1800.0

@@ -1,0 +1,28 @@
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> print("Harshit")
+Harshit
+>>> print("Harshit"+" Agrawal")
+Harshit Agrawal
+>>> a=input("Enter a-")
+Enter a-Python
+>>> b=input("Enter b -")
+Enter b -Programming
+>>> c=input("Enter c -")
+Enter c -19
+>>> print(a)
+Python
+>>> print(b)
+Programming
+>>> print(c)
+19
+>>> print(a,b,c)
+Python Programming 19
+>>> print("Lets Get Started")
+Lets Get Started
+>>> s="Course"
+>>> course="Python"
+>>> fee="2500"
+>>> print(('%s %s %s')%(s,course,fee))
+Course Python 3000
+>>> 
